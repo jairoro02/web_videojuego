@@ -1,0 +1,53 @@
+@import "https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=PT+Sans&display=swap";
+header {
+  height: 100px;
+  background-color: #ccc;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+body {
+  min-width: 360px;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a:link, a:visited, a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.personajes_aumento {
+  width: 600px;
+  height: 430px;
+  justify-content: center;
+  display: flex;
+}
+
+.personajes_aumento .personaje {
+  width: 0;
+  object-fit: cover;
+  opacity: .8;
+  flex-grow: 1;
+  transition: all .5s;
+}
+
+.personajes_aumento .personaje:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+/*# sourceMappingURL=index.8c02437b.css.map */
