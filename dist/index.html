@@ -14,22 +14,70 @@
         <h1>Nombre del videojuego centrado</h1>
     </header>
     <main class="principal">
-        <h2>Aquí iría todo el texto de contexto</h2>
+        <div class="texto">
+            <h2 class="titulo">Aquí iría el titulo de contexto</h2>
+            <h3 class="parrafo">El párrafo de contexto</h3>
+        </div>
         <section class="carrusel">
-            
+            <div class="grande">
+                <img src="/Background1.1e82cee4.png" alt="Imagen 1" class="img">
+                <img src="/Background2.104f98bc.png" alt="Imagen 2" class="img">
+                <img src="/Background3.34eca8d1.png" alt="Imagen 3" class="img">
+                <img src="/Background4.0c08a726.jpg" alt="Imagen 4" class="img">
+            </div>
+            <ul class="puntos">
+                <li class="punto activo"></li>
+                <li class="punto"></li>
+                <li class="punto"></li>
+                <li class="punto"></li>
+            </ul>
         </section>
-        <h2>Aquí iría todo el texto de contexto</h2>
+        <div class="texto">
+            <h2 class="titulo">Aquí iría el titulo de contexto</h2>
+            <h3 class="parrafo">El párrafo de contexto</h3>
+        </div>
         <section class="personajes_aumento">
-            <img src="/noticia.4a349fc0.jpg" alt="cositas" class="personaje">
-            <img src="/noticia.4a349fc0.jpg" alt="cositas" class="personaje">
-            <img src="/noticia.4a349fc0.jpg" alt="cositas" class="personaje">
-        </section>  
+            <img src="/personajejairo.01103f97.png" alt="aquí se encuentra el personaje principal que es un MDLR" class="personaje">
+            <img src="/craiigg.0f21ba40.png" alt="Un personaje secundario, un borracho británico" class="personaje">
+            <img src="/ortegano.f06389e1.png" alt="El boss final, es un profesor amargado y enfadado" class="personaje">
+        </section>
+        <div class="video">
+            <div class="texto">
+                <h2 class="titulo">Aquí iría el titulo de contexto</h2>
+                <h3 class="parrafo">El párrafo de contexto</h3>
+            </div>
+        </div>
     </main>
     
     <footer class="pie">
         <p>Copyrigth 2023</p>
         <p>Contacto: ahsjdha@kkhjashf.es</p>
     </footer>
-    <script src="/index.3edaf3f8.js"></script>
+    <script>const grande = document.querySelector(".grande");
+const punto = document.querySelectorAll(".punto");
+const personaje = document.querySelectorAll(".personaje");
+punto.forEach((cadaPunto, i)=>{
+    console.log("hola");
+    punto[i].addEventListener("click", ()=>{
+        console.log("funciona");
+        let posicion = i;
+        let operacion = posicion * -25;
+        grande.style.transform = `translateX(${operacion}%)`;
+        punto.forEach((cadaPunto, i)=>{
+            punto[i].classList.remove("activo");
+        });
+        punto[i].classList.add("activo");
+    });
+});
+personaje.forEach((cadaPersonaje, i)=>{
+    personaje[i].addEventListener("click", ()=>{
+        personaje.forEach((cadaPunto, i)=>{
+            personaje[i].classList.remove("activo");
+        });
+        personaje[i].classList.add("activo");
+    });
+});
+
+</script>
 <script src="/web_videojuego.59712999.js"></script></body>
 </html>
