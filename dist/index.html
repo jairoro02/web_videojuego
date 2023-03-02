@@ -50,7 +50,14 @@
         <div class="lightbox">
             <button class="cerrar">Cerrar</button>
             <img src="/personajejairo.01103f97.png" alt="" class="big">
-            <h3>hola</h3>
+            <div class="info_personaje">
+                <h2 class="titulo">
+                    
+                </h2>
+                <h3 class="parrafo">
+                    
+                </h3>
+            </div>
         </div>
         <section class="video">
             <div class="texto">
@@ -67,6 +74,8 @@
     <script>const grande = document.querySelector(".grande");
 const punto = document.querySelectorAll(".punto");
 const personaje = document.querySelectorAll(".personaje");
+const titulo_personaje = document.querySelector(".info_personaje>.titulo");
+const parrafo_personaje = document.querySelector(".info_personaje>.parrafo");
 const imagen_personaje = document.querySelector(".big");
 const lightbox = document.querySelector(".lightbox");
 const cerrar = document.querySelector(".cerrar");
@@ -108,6 +117,18 @@ personaje.forEach((cadaPersonaje, i)=>{
         fondo.classList.add("activo");
         lightbox.classList.add("activo");
         imagen_personaje.setAttribute("src", ruta);
+        if (i == 0) {
+            titulo_personaje.innerHTML = "El Jhonny";
+            parrafo_personaje.innerHTML = "El personaje que controlar\xe1s es un chico que fue por el mal camino de la vida, se reconoce a \xe9l mismo como MDLR. Junto con sus amigos le gusta causar problemas por las calles, tanto es as\xed, que se atrevi\xf3 a robarle un vape a un profesor.";
+        }
+        if (i == 1) {
+            titulo_personaje.innerHTML = "El hooligan loco";
+            parrafo_personaje.innerHTML = "Hay que tener cuidado con este personaje, puede ser realmente peligroso si te lo encuentras en un callej\xf3n, sobretodo nunca debatas de f\xfatbol con \xe9l. Siempre est\xe1 borracho, como te puede indicar su barriga le encanta la cerveza, espero que nunca te lo cruces porque ser\xe1 un autentico reto para ti.";
+        }
+        if (i == 2) {
+            titulo_personaje.innerHTML = "Er Javi";
+            parrafo_personaje.innerHTML = "Este es el boss final, un profesor de programaci\xf3n, puede parecer insignificante pero cuando se enfada ya te puedes preparar para correr. Est\xe1 muy enfadado contigo, porque efectivamente le robaste su vape, no sabes en el l\xedo que te has metido.";
+        }
     });
 });
 cerrar.addEventListener("click", ()=>{

@@ -15,6 +15,14 @@
     .texto.carrusel{
        align-items: center;
        transition: .5s ease;
+       .titulo{
+        font-size: 4em;
+       }
+       .parrafo{
+        width: 70%;
+        font-size: 1.5em;
+        padding-top: 1%;
+       }
     }
     .carrusel{
         display: flex;
@@ -152,6 +160,31 @@
             background: white;
             margin-top: 3%;
             
+        }
+
+        .info_personaje{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 3%;
+            background-color: white;
+            width: 70%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            margin-right: 2%;
+            border-radius: 20px;
+            box-shadow: 7px 5px 5px 5px  rgb(100, 100, 100);
+            border: solid rgba(135, 135, 135, 0.582);
+
+            .titulo{
+                font-size: 4em;
+                margin-bottom: 2%;
+            }
+
+            .parrafo{
+                width: 70%;
+                font-size: 1.5em;
+            }
         }
     }
     .lightbox.activo{
