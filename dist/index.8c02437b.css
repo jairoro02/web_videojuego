@@ -11,6 +11,7 @@ header {
 
 body {
   min-width: 360px;
+  z-index: 0;
   flex-direction: column;
   align-items: center;
   margin: 0;
@@ -47,6 +48,7 @@ a:link, a:visited, a:active {
 
 .principal .texto.carrusel {
   align-items: center;
+  transition: all .5s;
 }
 
 .principal .carrusel {
@@ -57,6 +59,7 @@ a:link, a:visited, a:active {
   flex-direction: column;
   margin-bottom: 20px;
   padding: 2em;
+  transition: all .5s;
   display: flex;
   overflow: hidden;
 }
@@ -89,6 +92,7 @@ a:link, a:visited, a:active {
   justify-content: center;
   align-items: center;
   padding: 1em;
+  transition: all .5s;
   display: flex;
 }
 
@@ -99,6 +103,7 @@ a:link, a:visited, a:active {
   border-radius: 50%;
   margin: 1em;
   list-style: none;
+  transition: all .5s;
 }
 
 .principal .carrusel .puntos .punto:hover {
@@ -107,6 +112,7 @@ a:link, a:visited, a:active {
 
 .principal .carrusel .puntos .punto.activo {
   background-color: green;
+  transition: all .5s;
 }
 
 .principal .personajes_aumento {
@@ -131,25 +137,46 @@ a:link, a:visited, a:active {
   width: 300px;
   opacity: 1;
   filter: contrast(120%);
+  transition: all .5s;
+}
+
+.principal .fondo {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: #a5a5a5cc;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.principal .fondo.activo {
+  display: flex;
 }
 
 .principal .lightbox {
   width: 79.5%;
+  height: 60%;
   z-index: 2;
   opacity: 0;
   pointer-events: none;
-  background: #fffc;
+  background: #fff;
+  border-radius: 20px;
   transition: all .5s;
   display: none;
   position: fixed;
   top: 20%;
   left: 10%;
+  transform: scale(0);
 }
 
 .principal .lightbox .cerrar {
   width: 4em;
   height: 4em;
   background: #fff;
+  border-radius: 10px;
+  transition: all .5s;
   position: absolute;
   top: 0;
   right: 0;
@@ -163,14 +190,18 @@ a:link, a:visited, a:active {
 }
 
 .principal .lightbox .big {
-  width: 20%;
-  background: #add8e6;
+  background: #fff;
+  margin-top: 3%;
+  padding-left: 3%;
+  transform: scale(.9);
 }
 
 .principal .lightbox.activo {
   opacity: 1;
   pointer-events: auto;
+  transition: all .5s;
   display: flex;
+  transform: scale(1);
 }
 
 .pie {

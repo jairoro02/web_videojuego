@@ -14,6 +14,7 @@
     }
     .texto.carrusel{
        align-items: center;
+       transition: .5s ease;
     }
     .carrusel{
         display: flex;
@@ -25,6 +26,7 @@
         overflow: hidden;
         margin-bottom: 20px;
         border-radius: 15px;
+        transition: .5s ease;
         .grande{
             width: 400%;
             background-color: aliceblue;
@@ -55,6 +57,7 @@
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
+            transition: .5s ease;
             .punto{
                 list-style: none;
                 width: 2em;
@@ -62,12 +65,14 @@
                 background-color: gray;
                 border-radius: 50%;
                 margin: 1em;
+                transition: .5s ease;
             }
             .punto:hover{
                 cursor: pointer;
             }
             .punto.activo{
                 background-color: green;
+                transition: .5s ease;
             }
         }
     }
@@ -91,7 +96,23 @@
             width: 300px;
             opacity: 1;
             filter: contrast(120%);
+            transition: .5s ease;
         }
+    }
+
+    .fondo{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(165, 165, 165, 0.8);
+        z-index: 1;
+        display: none;
+    }
+
+    .fondo.activo{
+        display: flex;
     }
     
     .lightbox{
@@ -99,11 +120,15 @@
         top: 20%;
         left: 10%;
         width: 79.5%;
-        background: rgba(255,255,255,.8);
+        height: 60%;
+        background: white;
+        border-radius: 20px;
         z-index: 2;
         display: none;
-        transition:all .5s ease;
+       
         opacity: 0;
+        transition:all .5s ease;
+        transform: scale(0);
         pointer-events: none;
         .cerrar{
             position: absolute;
@@ -112,6 +137,8 @@
             width: 4em;
             height: 4em;
             background: white;
+            transition:all .5s ease;
+            border-radius: 10px;
         }
         .cerrar:hover{
             cursor: pointer;
@@ -120,14 +147,19 @@
             transition: 0.5s ease;
         }
         .big{
-            width: 20%;
-            background: lightblue;
+            padding-left: 3%;
+            transform: scale(0.9);
+            background: white;
+            margin-top: 3%;
+            
         }
     }
     .lightbox.activo{
         opacity: 1;
+        transform: scale(1);
         display: flex;
         pointer-events: auto;
+        transition:all .5s ease;
         
     }
 }

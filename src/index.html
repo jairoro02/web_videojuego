@@ -44,6 +44,9 @@
             <img src="/src/assests/images/personajesylogo/craiigg.png" alt="Un personaje secundario, un borracho británico" class="personaje">
             <img src="/src/assests/images/personajesylogo/ortegano.png" alt="El boss final, es un profesor amargado y enfadado" class="personaje">
         </section>
+        <div class="fondo">
+
+        </div>
         <div class="lightbox">
             <button class="cerrar">Cerrar</button>
             <img src="/src/assests/images/personajesylogo/personajejairo.png" alt="" class="big">
@@ -70,6 +73,7 @@
         const cerrar = document.querySelector('.cerrar')
         const titulo_carrusel = document.querySelector('.texto.carrusel>.titulo')
         const parrafo_carrusel = document.querySelector('.texto.carrusel>.parrafo')
+        const fondo = document.querySelector('.fondo')
 
         punto.forEach((cadaPunto, i) => {
             console.log("hola")
@@ -107,6 +111,7 @@
             personaje[i].addEventListener('click',()=>{
                 let ruta = cadaPersonaje.src
 
+                fondo.classList.add('activo')
                 lightbox.classList.add('activo')
                 imagen_personaje.setAttribute('src',ruta)
                 
@@ -115,6 +120,7 @@
         });
 
         cerrar.addEventListener('click', ()=>{
+            fondo.classList.remove('activo')
             lightbox.classList.remove('activo')
             imagen_personaje.setAttribute('src','')
         })
