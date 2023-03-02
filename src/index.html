@@ -12,12 +12,12 @@
 <body>
     <header>
         <img src="/src/assests/images/personajesylogo/logoFondonegro.png" alt="" style="width: 4%;">
-        <h1>Nombre del videojuego centrado</h1>
+        <h1>Streets of Farra</h1>
     </header>
     <main class="principal">
         <div class="texto">
-            <h2 class="titulo">Aquí iría el titulo de contexto</h2>
-            <h3 class="parrafo">El párrafo de contexto</h3>
+            <h2 class="titulo">Las pantallas de nuestro nivel</h2>
+            <h3 class="parrafo">Aquí podéis observar un carrusel interactivo, constituido por las pantallas que forman el nivel</h3>
         </div>
         <section class="carrusel">
             <div class="grande">
@@ -33,16 +33,23 @@
                 <li class="punto"></li>
             </ul>
         </section>
-        <div class="texto">
-            <h2 class="titulo">Aquí iría el titulo de contexto</h2>
-            <h3 class="parrafo">El párrafo de contexto</h3>
+        <div id="carrusel_info" class="texto carrusel">
+            <h2 class="titulo">El valle mágico</h2>
+            <h3 class="parrafo">Este es el valle que se encuentra a las afueras de la ciudad, cómo podemos observar tiene un toque especial. Nos puede recordar a todos esos cuentos que nos han contado de pequeño,
+                pero hay que tener claro que no va a llevar a ningún lugar de en sueño, más bien a una pesadilla.
+            </h3>
         </div>
         <section class="personajes_aumento">
             <img src="/src/assests/images/personajesylogo/personajejairo.png" alt="aquí se encuentra el personaje principal que es un MDLR" class="personaje">
             <img src="/src/assests/images/personajesylogo/craiigg.png" alt="Un personaje secundario, un borracho británico" class="personaje">
             <img src="/src/assests/images/personajesylogo/ortegano.png" alt="El boss final, es un profesor amargado y enfadado" class="personaje">
         </section>
-        <div class="video">
+        <div class="lightbox">
+            <button class="cerrar">Cerrar</button>
+            <img src="/src/assests/images/personajesylogo/personajejairo.png" alt="" class="big">
+            <h3>hola</h3>
+        </div>
+        <section class="video">
             <div class="texto">
                 <h2 class="titulo">Aquí iría el titulo de contexto</h2>
                 <h3 class="parrafo">El párrafo de contexto</h3>
@@ -58,6 +65,11 @@
         const grande = document.querySelector('.grande')
         const punto = document.querySelectorAll('.punto')
         const personaje = document.querySelectorAll('.personaje')
+        const imagen_personaje = document.querySelector('.big')
+        const lightbox = document.querySelector('.lightbox')
+        const cerrar = document.querySelector('.cerrar')
+        const titulo_carrusel = document.querySelector('.texto.carrusel>.titulo')
+        const parrafo_carrusel = document.querySelector('.texto.carrusel>.parrafo')
 
         punto.forEach((cadaPunto, i) => {
             console.log("hola")
@@ -74,18 +86,38 @@
                     punto[i].classList.remove('activo')
                 });
                 punto[i].classList.add('activo')
+                if(i == 1){
+                    titulo_carrusel.innerHTML = 'Un atardecer tenebroso'
+                    parrafo_carrusel.innerHTML = 'El comienzo de la ciudad en la que nos adentraremos, parece un lugar tranquilo pero el tiempo no tardará en demostrarte lo contrario, nunca podrás olvidar las cosas que se pueden encontrar aquí.'
+                }if(i == 0){
+                    titulo_carrusel.innerHTML = 'El valle mágico'
+                    parrafo_carrusel.innerHTML = 'Este es el valle que se encuentra a las afueras de la ciudad, cómo podemos observar tiene un toque especial. Nos puede recordar a todos esos cuentos que nos han contado de pequeño, pero hay que tener claro que no va a llevar a ningún lugar de en sueño, más bien a una pesadilla.'
+                }if(i==2){
+                    titulo_carrusel.innerHTML = 'Calles vandálicas'
+                    parrafo_carrusel.innerHTML = 'Nos vamos acercando al lugar donde se encontrará el boss final, aquí ya se van notando los actos causados por los macarras y adolescentes de hoy en día, ya va siendo hora de que llegue alguien a poner orden.'
+                }if(i==3){
+                    titulo_carrusel.innerHTML = 'Locura industrial'
+                    parrafo_carrusel.innerHTML = 'Aquí se encuentra el boss final, un profesor con muy mala leche y con ganas de poner orden en esta ciudad controladas por MDLRs. Concretamente nos encontramos en la zona industrial, ya llegando a las afueras de las ciudad, pero tendrás que combatir a este profesor que no te dejará salir.'
+                }
             })
         
         });
 
         personaje.forEach((cadaPersonaje ,i) => {
             personaje[i].addEventListener('click',()=>{
-                personaje.forEach((cadaPunto , i) => {
-                    personaje[i].classList.remove('activo')
-                });
-                personaje[i].classList.add('activo')
+                let ruta = cadaPersonaje.src
+
+                lightbox.classList.add('activo')
+                imagen_personaje.setAttribute('src',ruta)
+                
+                
             })
         });
+
+        cerrar.addEventListener('click', ()=>{
+            lightbox.classList.remove('activo')
+            imagen_personaje.setAttribute('src','')
+        })
     </script>
 </body>
 </html>
