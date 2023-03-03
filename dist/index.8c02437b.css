@@ -3,7 +3,8 @@
 header {
   width: 100%;
   height: 100px;
-  background-color: #ccc;
+  color: #fff;
+  background-color: #212121;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -36,7 +37,7 @@ a:link, a:visited, a:active {
 
 .principal {
   width: 1500px;
-  background-color: #cccccc8b;
+  background-color: #cccccc7b;
   border-radius: .5em;
   flex-direction: column;
   align-items: center;
@@ -47,13 +48,31 @@ a:link, a:visited, a:active {
   display: flex;
 }
 
+.principal .texto {
+  color: #fff;
+  width: 75%;
+}
+
+.principal .texto .titulo {
+  -webkit-text-stroke: 1px black;
+  font-size: 5em;
+}
+
+.principal .texto .parrafo {
+  width: 80%;
+  padding-top: 1%;
+  font-size: 1.5em;
+}
+
 .principal .texto.carrusel {
+  color: #fff;
   align-items: center;
+  padding-top: 0;
   transition: all .5s;
 }
 
 .principal .texto.carrusel .titulo {
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .principal .texto.carrusel .parrafo {
@@ -65,11 +84,10 @@ a:link, a:visited, a:active {
 .principal .carrusel {
   width: 90%;
   max-width: 100em;
-  background-color: #f0f8ff;
   border-radius: 15px;
   flex-direction: column;
   margin-bottom: 20px;
-  padding: 2em;
+  padding: 2em 2em 0;
   transition: all .5s;
   display: flex;
   overflow: hidden;
@@ -77,7 +95,6 @@ a:link, a:visited, a:active {
 
 .principal .carrusel .grande {
   width: 400%;
-  background-color: #f0f8ff;
   flex-flow: row;
   justify-content: flex-start;
   align-items: center;
@@ -91,14 +108,12 @@ a:link, a:visited, a:active {
 .principal .carrusel .grande img {
   min-height: 10vh;
   width: 22.2222%;
-  background-color: #0f0;
   margin-left: 1%;
   margin-right: 2%;
 }
 
 .principal .carrusel .puntos {
   width: 100%;
-  background-color: #f0f8ff;
   flex-flow: row;
   justify-content: center;
   align-items: center;
@@ -110,7 +125,7 @@ a:link, a:visited, a:active {
 .principal .carrusel .puntos .punto {
   width: 2em;
   height: 2em;
-  background-color: gray;
+  background-color: #c7c7c7;
   border-radius: 50%;
   margin: 1em;
   list-style: none;
@@ -130,6 +145,7 @@ a:link, a:visited, a:active {
   width: 500px;
   height: 400px;
   justify-content: center;
+  margin-top: 3%;
   display: flex;
 }
 
@@ -137,7 +153,6 @@ a:link, a:visited, a:active {
   width: 200px;
   height: 100%;
   object-fit: cover;
-  opacity: .8;
   background-color: #fff;
   flex-grow: 1;
   transition: all .5s;
@@ -147,7 +162,7 @@ a:link, a:visited, a:active {
   cursor: pointer;
   width: 300px;
   opacity: 1;
-  filter: contrast(120%);
+  filter: contrast(150%);
   transition: all .5s;
 }
 
@@ -243,7 +258,8 @@ a:link, a:visited, a:active {
 .pie {
   width: 100%;
   height: 50px;
-  background-color: #ccc;
+  color: #fff;
+  background-color: #212121;
   flex-direction: column;
   align-items: center;
   display: flex;
