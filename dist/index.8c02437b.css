@@ -12,6 +12,7 @@ header {
 body {
   min-width: 360px;
   z-index: 0;
+  background-image: url("fondito.5b376416.jpg");
   flex-direction: column;
   align-items: center;
   margin: 0;
@@ -35,7 +36,7 @@ a:link, a:visited, a:active {
 
 .principal {
   width: 1500px;
-  background-color: #ccc;
+  background-color: #cccccc8b;
   border-radius: .5em;
   flex-direction: column;
   align-items: center;
@@ -136,7 +137,7 @@ a:link, a:visited, a:active {
   width: 200px;
   height: 100%;
   object-fit: cover;
-  opacity: .6;
+  opacity: .8;
   background-color: #fff;
   flex-grow: 1;
   transition: all .5s;
@@ -171,7 +172,7 @@ a:link, a:visited, a:active {
   z-index: 2;
   opacity: 0;
   pointer-events: none;
-  background: #fff;
+  background: #fff0;
   border-radius: 20px;
   transition: all .5s;
   display: none;
@@ -182,10 +183,12 @@ a:link, a:visited, a:active {
 }
 
 .principal .lightbox .cerrar {
-  width: 4em;
-  height: 4em;
-  background: #fff;
-  border-radius: 10px;
+  width: 2em;
+  height: 2em;
+  background: #ffffff82;
+  border: #ffffff82;
+  border-radius: 50%;
+  font-size: 1.5em;
   transition: all .5s;
   position: absolute;
   top: 0;
@@ -200,10 +203,8 @@ a:link, a:visited, a:active {
 }
 
 .principal .lightbox .big {
-  background: #fff;
-  margin-top: 3%;
   padding-left: 3%;
-  transform: scale(.9);
+  transform: scale(.85);
 }
 
 .principal .lightbox .info_personaje {
