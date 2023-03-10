@@ -96,6 +96,7 @@ a:link, a:visited, a:active {
   padding-bottom: 2%;
   transition: all .6s;
   display: flex;
+  overflow: hidden;
 }
 
 .principal .texto {
