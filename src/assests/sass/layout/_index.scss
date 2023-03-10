@@ -6,20 +6,27 @@
     padding-top: 2%;
     padding-bottom: 2%;
     background-color: #9997977b;
-    width: 1500px;
+    width: 90%;
     border-radius: 40px;
     margin-bottom: 50px;
+    transition: 600ms all;
     .texto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         color: white;
         width: 75%;
+        transition: 600ms all;
         .titulo{
             font-size: 5em;
             -webkit-text-stroke: 1px white;
+            transition: 600ms all;
         }
         .parrafo{
             font-size: 1.5em;
             padding-top: 1%;
             width: 80%;
+            transition: 600ms all;
         }
     }
     .texto.carrusel{
@@ -27,13 +34,16 @@
        transition: .5s ease;
        color: white;
        padding-top: 0;
+       transition: 600ms all;
        .titulo{
         font-size: 3em;
+        transition: 600ms all;
        }
        .parrafo{
         width: 70%;
         font-size: 1.5em;
         padding-top: 1%;
+        transition: 600ms all;
        }
     }
     .carrusel{
@@ -58,11 +68,13 @@
             transition: all .5s ease;
             transform: translateX(0%);
             overflow: hidden;
+            transition: 600ms all;
             img{
                 min-height: 10vh;
                 width: calc(100%/4.5);
                 margin-left: 1%;
                 margin-right: 2%;
+                transition: 600ms all;
                 
             }
         }
@@ -86,6 +98,7 @@
             }
             .punto:hover{
                 cursor: pointer;
+                transition: 600ms all;
             }
             .punto.activo{
                 background-color: green;
@@ -101,6 +114,7 @@
         height: 400px;
         margin-top: 3%;
         margin-bottom: 7%;
+        transition: 600ms all;
         .personaje{
             background-color: rgb(255, 255, 255);
             width: 200px;
@@ -108,6 +122,7 @@
             flex-grow: 1;
             object-fit: cover;
             transition: .5s ease;
+            transition: 600ms all;
         }
         .personaje:hover{
             cursor: pointer;
@@ -115,6 +130,7 @@
             opacity: 1;
             filter: contrast(150%);
             transition: .5s ease;
+            transition: 600ms all;
         }
     }
 
@@ -127,6 +143,7 @@
         background: rgba(165, 165, 165, 0.8);
         z-index: 1;
         display: none;
+        transition: 600ms all;
     }
 
     .fondo.activo{
@@ -148,6 +165,7 @@
         transition:all .5s ease;
         transform: scale(0);
         pointer-events: none;
+        transition: 600ms all;
         .cerrar{
             position: absolute;
             top: 0;
@@ -159,16 +177,19 @@
             border-radius: 50%;
             font-size: 1.5em;
             border:  rgba(255, 255, 255, 0.511);
+            transition: 600ms all;
         }
         .cerrar:hover{
             cursor: pointer;
             color: white;
             background-color: red;
             transition: 0.5s ease;
+            transition: 600ms all;
         }
         .big{
             padding-left: 3%;
             transform: scale(0.85);
+            transition: 600ms all;
             
         }
 
@@ -185,15 +206,18 @@
             border-radius: 20px;
             box-shadow: 7px 5px 5px 5px  rgb(100, 100, 100);
             border: solid rgba(135, 135, 135, 0.582);
+            transition: 600ms all;
 
             .titulo{
                 font-size: 4em;
                 margin-bottom: 2%;
+                transition: 600ms all;
             }
 
             .parrafo{
                 width: 70%;
                 font-size: 1.5em;
+                transition: 600ms all;
             }
         }
     }
@@ -210,23 +234,134 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        width: 90%;
+        transition: 600ms all;
         .texto{
             margin-bottom: 4%;
+            width: 75%;
+            transition: 600ms all;
             .titulo{
                 font-size: 4em;
                 margin-bottom: 2%;
+                transition: 600ms all;
             }
             .parrafo{
                 font-size: 1.5em;
+                transition: 600ms all;
             }
         }
         .video_container{
-            position: relative;
-            padding-bottom: 56.25%; 
-            height: 0;
+
+            align-items: center;
+            video{
+                width: 720;
+                height: 480;
+                transition: 600ms all;
+            }
+            transition: 600ms all;
     
         }
     }
 }
 
 
+
+@media(max-width:680px){
+    .principal{
+        .texto{
+            .titulo{
+                font-size: 2.2em;
+                transition: 600ms all;
+            }
+            .parrafo{
+                font-size: 1.2em;
+                transition: 600ms all;
+            }
+        }
+        .texto.carrusel{
+            
+            .titulo{
+             font-size: 2em;
+             transition: 600ms all;
+            }
+            .parrafo{
+             font-size: 1em;
+             padding-top: 1%;
+             transition: 600ms all;
+            }
+        }
+        .carrusel{
+            .grande{
+                img{
+                    margin-right: 4%;
+                    margin-left: 0;
+                    transition: 600ms all;
+                }
+            }
+            .puntos{
+                
+                .punto{
+                    height: 1.8em;
+
+                    transition: .5s ease;
+                }
+            }   
+        }
+        .personajes_aumento{
+            width: 90%;
+            transition: 600ms all;
+            .personaje{
+                background-color: rgb(255, 255, 255);
+                width: 100px;
+                height: 50%;
+                flex-grow: 1;
+                object-fit: cover;
+                transition: .5s ease;
+            }
+            .personaje:hover{
+                cursor: pointer;
+                width: 150px;
+                opacity: 1;
+                filter: contrast(150%);
+                transition: .5s ease;
+            }
+        }
+        .video{
+            margin-top: -30%;
+
+            .texto{
+                margin-bottom: 0;
+                width: 75%;
+                transition: 600ms all;
+                .titulo{
+                    font-size: 2.2em;
+                    transition: 600ms all;
+                }
+                .parrafo{
+                    font-size: 1.2em;
+                    transition: 600ms all;
+                }
+            }
+
+        }
+       
+        
+    }
+    
+}
+
+@media(max-width:820px){
+    .principal{
+        .video{
+           
+            .video_container{
+    
+                video{
+                   transform: scale(0.5);
+                   transition: 600ms all;
+                }
+        
+            }
+        }
+    }
+}
